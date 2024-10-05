@@ -1,0 +1,14 @@
+query-filters:
+    - exclude:
+        id: 
+          - cpp/command-line-injection
+          - cpp/long-switch
+          - cpp/path-injection
+          - cpp/large-parameter
+          - cpp/world-writable-file-creation
+          - cpp/short-global-name
+          - cpp/integer-used-for-enum
+          - cpp/poorly-documented-function
+          - cpp/array-in-interface
+          - cpp/commented-out-code
+          - cpp/unused-static-variable

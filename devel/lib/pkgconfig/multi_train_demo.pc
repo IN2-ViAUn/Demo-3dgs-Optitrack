@@ -1,0 +1,8 @@
+prefix=/home/lamps/catkin_ws/devel
+
+Name: multi_train_demo
+Description: Description of multi_train_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

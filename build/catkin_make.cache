@@ -1,0 +1,2 @@
+multi_train_demo
+-DCATKIN_DEVEL_PREFIX=/home/lamps/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lamps/catkin_ws/install -G Unix Makefiles
