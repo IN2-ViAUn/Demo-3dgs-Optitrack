@@ -10,7 +10,7 @@
 最终的解决方案是：3090服务器上的 windows 上开一个 WLS（Windows Subsystem for Linux）版本的 ubuntu20.04 子系统，在子系统中完成对动捕相机消息的订阅和重发布，然后再用 4090 服务器（310的那一台）去订阅 WLS 通过 TCP 协议 发布的消息，最终是在4090服务器上完成小车位姿的处理以及渲染。
 
 <div align="center">
-  <img width="350" alt="78cc4352fec7d7c68dd568f416e572b" src="https://github.com/user-attachments/assets/41c27e4d-579a-4ec4-93be-6b332d55a0aa)">
+  <img width="350" src="https://github.com/IN2-ViAUn/Demo-3dgs-Optitrack/blob/main/markdown/images/tongxun.png">
 </div>
 
 ## 2 分支说明及注意事项
