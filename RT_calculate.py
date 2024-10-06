@@ -27,7 +27,7 @@ def convert_quat_and_swap_euler(init_ori_cap_y):
     return quat
 
 
-# 场地坐标系下的点
+# 动捕坐标系下的点
 motion_tracking_points = np.array([
     [ -0.6182,  0.4610, -0.8075],
     [ -0.2732,  0.4677,  0.0923],
@@ -41,7 +41,7 @@ motion_tracking_points = np.array([
     [  0.59,  0.083,  0.255]
 ])
 
-# 动捕坐标系下的点(交换了YZ)
+# 场地坐标系下的点
 camera_points = np.array([
     [-36.429,  1.910, 4.555 ],
     [-35.493,  1.873, 6.696 ],

@@ -60,5 +60,11 @@ gs2 = gaussians_scene._load_ply(os.path.join(args.workspace, 'car_xe.ply'),True)
 
 - 初版代码设定能同时对两辆小车进行操作，因此需要打开 ``mini_bone_30000.py`` 和 ``mini_bone_30001.py``， wsl上的代码只有同时与两个端口建立联系后才会发出消息。
 - 在 wsl 运行命令：``roslaunch vrpn_client_ros sample.launch server:=127.0.0.1``，因为第一次接受 ROS命令是在本机，所以ip地址为127.0.0.1
-- 在 4090 服务器上运行 SIBR_remoteviewer，mini_bone_30000.py 和 30001 如果正常输出日志（收到并计算出了此时的小车位置），但看着仍然是一片黑，则可以按Y切换到 trackball 模式滑动滚轮缩小视角，应该能够找到此时的场地。动一下小车就会发现场地上的小车模型也在跟着运动。
+- 在 4090 服务器上运行 SIBR_remoteviewer
+  ```
+  cd yXe_file/3DGS/gaussian-splatting/SIBR_viewers/install/bin/
+  # 默认端口为6009
+  ./SIBR_remoteGaussian_app --ip 127.0.0.1 --port 6009 --path /home/wangyixian/yXe_file/3DGS/gaussian-splatting/data/lego
+  ```
+- mini_bone_30000.py 和 30001 如果正常输出日志（收到并计算出了此时的小车位置），但看着仍然是一片黑，则可以按Y切换到 trackball 模式滑动滚轮缩小视角，应该能够找到此时的场地。动一下小车就会发现场地上的小车模型也在跟着运动。
 - 注意：白色小车对应的动捕刚体是Cam_0（端口号30000），绿色小车对应的是Cam_1（端口号30001）
