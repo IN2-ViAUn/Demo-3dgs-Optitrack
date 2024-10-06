@@ -10,7 +10,7 @@
 最终的解决方案是：3090服务器上的 windows 上开一个 WLS（Windows Subsystem for Linux）版本的 ubuntu20.04 子系统，在子系统中完成对动捕相机消息的订阅和重发布，然后再用 4090 服务器（310的那一台）去订阅 WLS 通过 TCP 协议 发布的消息，最终是在4090服务器上完成小车位姿的处理以及渲染。
 
 <div align="center">
-  <img width="350" src="https://github.com/IN2-ViAUn/Demo-3dgs-Optitrack/blob/main/markdown/images/tongxun.png">
+  <img width="450" src="https://github.com/IN2-ViAUn/Demo-3dgs-Optitrack/blob/main/markdown/images/tongxun.png">
 </div>
 
 ## 2 分支说明及注意事项
@@ -46,7 +46,7 @@ gs2 = gaussians_scene._load_ply(os.path.join(args.workspace, 'car_xe.ply'),True)
 - 对齐方案使用的是CloudCompare。导入点云文件后，平移旋转点云至坐标系与动捕坐标系对齐，然后进行点云粗配准，步骤见 [CSDN点云配准教程](https://blog.csdn.net/qq_36686437/article/details/119966436?ops_request_misc=%257B%2522request%255Fid%2522%253A%25229D663390-24D3-4930-B575-5B0DE2DE3361%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=9D663390-24D3-4930-B575-5B0DE2DE3361&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-119966436-null-null.142^v100^pc_search_result_base4&utm_term=cloudcompare%E7%82%B9%E4%BA%91%E9%85%8D%E5%87%86%E8%9E%8D%E5%90%88&spm=1018.2226.3001.4187)。得到矩阵之后，需要运行 gs_save.py 以便将高斯球的方向也进行旋转，避免出现毛刺情况。使用本办法保存的点云，再次加载的时候就不需要二次解码（即加载点云时不需要加"True"）
 
 <div align="center">
-  <img width="350" alt="78cc4352fec7d7c68dd568f416e572b" src="https://github.com/user-attachments/assets/1e2897c2-6d3d-49ef-999b-57cb7839dd77">
+  <img width="450" src="https://github.com/IN2-ViAUn/Demo-3dgs-Optitrack/blob/main/markdown/images/zuobiao.png">
 </div>
 
 #### (2) 单独小车模型准备
